@@ -6,3 +6,7 @@ app = Flask(__name__)
 def greet():
     name = request.args.get('name', 'World')
     return jsonify({'message': f'Hello, {name}!'})
+
+@app.route("/")
+def start():
+    return "The IRROS Server is Running"
